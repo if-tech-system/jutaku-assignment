@@ -1,6 +1,6 @@
 # 課題概要
 
-https://www.notion.so/if-tech/177285b35dff806faa95f2d08e32f195
+https://if-tech.notion.site/177285b35dff806faa95f2d08e32f195
 
 # 環境
 
