@@ -1,0 +1,15 @@
+---
+description: React のコンポーネント作成および状態管理に関するルール。TypeScript実装、Composableパターンの採用、不要な useState/useEffect の排除などを定義。
+globs: src/**/*.{jsx,tsx}
+---
+# React のルール
+
+- コンポーネントは常に TypeScript で実装し、React.FC の型指定は行わず、const で定義する。
+- コンポーネントは Composable なパターンに従い、関連するロジックはカスタムフックや高階コンポーネント（HOC）でまとめる。
+- 宣言的な JSX を記述し、レンダリングロジックはシンプルに保つ。
+- 不要な useState や useEffect の使用は避け、computed state、useMemo、useCallback を活用して再レンダリングを最小限にする。
+- DOM の直接操作は避け、React の状態管理と再レンダリングロジックに従う。
+- データの更新・削除・送信などのミューテーション操作を行うボタンには必ず二重クリック防止処理を実装する。
+- フォーム検証は Zod と react-hook-form を組み合わせて行う。
+- このプロジェクトでは src/app/api を使用せず、/server/router に定義した tRPC ルーターを利用する。
+- コンポーネントとスタイリングには Mantine UI を使用する。

@@ -1,0 +1,14 @@
+---
+description:  全般 / JavaScriptのコーディングルール。export default の使用制限、定数の記述方法、非同期処理の実装方法などを定義。
+globs: **/*.{js,ts,jsx,tsx}
+---
+# 全般 / JavaScript のルール
+
+- export default は、Next.js のページなど例外的なケースを除き使用しない。
+- 定数はアッパースネークケースで関数外に記述し、定数であることを明示する。
+- 複数の引数を持つ関数はオブジェクト引数にして、引数の順番に依存しない設計とする。
+- then の代わりに await を使用し、await と then の併用は禁止する。
+- サーバー側でのグローバルなファイルの読み込みは避け、必要なときに動的インポートする。
+- map 関数の key には index を使用せず、適切なキーがない場合は crypto.randomUUID() を利用する。
+- forEach の使用は避け、for...of ループを用いる。
+- button タグには必ず type="button" を指定し、onClick イベントがある場合はキーボード操作用のイベントハンドラも実装する。

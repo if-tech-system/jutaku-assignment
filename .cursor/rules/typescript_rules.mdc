@@ -1,0 +1,12 @@
+---
+description: TypeScript のルール。any型の排除、型定義は type の使用、nullではなくundefinedの使用、Enumの代わりにUnion型の活用、定数定義、Zodによる型安全性の確保を定義。
+globs: **/*.{ts,tsx}
+---
+# TypeScript のルール
+
+- すべてのコードで TypeScript を使用し、any 型は一切使用しない。
+- 型定義は interface ではなく type を用いて統一する。
+- null ではなく undefined を使用し、一貫性を保つ。
+- Enum 型の使用を避け、代わりに Union 型を活用する。
+- 定数は as const satisfies を用いて定義し、型安全性と詳細な型情報を提供する。
+- Zod を使用して入力スキーマを定義し、堅牢な型チェックとバリデーションを行う。

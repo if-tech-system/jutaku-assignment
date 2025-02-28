@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "prisma.prisma",
+    "gruntfuggly.todo-tree",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "biomejs.biome",
+    "GitHub.copilot",
+    "github.vscode-github-actions",
+    "mikestead.dotenv",
+    "formulahendry.auto-rename-tag",
+    "ms-azuretools.vscode-docker",
+    "wmaurer.change-case",
+    "naumovs.color-highlight"
+  ]
+}

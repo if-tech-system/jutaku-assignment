@@ -1,0 +1,9 @@
+---
+description: Prisma のルール。Prismaスキーマに基づく型の活用、必要なデータのみ取得するための select の使用、複数データベース処理時のトランザクション利用を定義。
+globs: prisma/**/*.prisma, src/server/**/*.{ts,tsx}
+---
+# Prisma のルール
+
+- Prisma スキーマで定義した model の型や enum の型・値をそのまま利用する。
+- 必要なデータのみを取得するため、include ではなく select を使用する。
+- 複数のデータベース処理を行う場合は、必ずトランザクションを利用する。

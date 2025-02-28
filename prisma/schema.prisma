@@ -1,0 +1,33 @@
+// docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model User {
+  id    String     @id // 認証プロバイダーのユーザーID
+  email String  @unique
+  name  String
+  role  Role    @default(USER)
+  todos Todo[]
+}
+enum Role {
+  USER
+  ADMIN
+}
+
+
+model Todo {
+  id        String   @id @default(uuid()) // Todoの一意識別子
+  title     String   // Todoのタイトル
+  completed Boolean  @default(false)    // 完了ステータス
+  createdAt DateTime @default(now())    // 作成日時
+  updatedAt DateTime @updatedAt       // 更新日時
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+}

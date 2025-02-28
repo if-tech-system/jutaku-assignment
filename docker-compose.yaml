@@ -1,0 +1,13 @@
+# データベース起動
+version: '3.8'
+services:
+  db:
+    container_name: 'jutaku-kadai-db'
+    image: postgres:16
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=jutaku-kadai
+      # - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - '0.0.0.0:25432:5432'

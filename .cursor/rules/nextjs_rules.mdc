@@ -1,0 +1,10 @@
+---
+description: Next.js のルール。サーバーコンポーネントでのデータ取得、SSRの優先、export default の例外的使用、'use client' の最小化、複数非同期処理の並列実行などを定義。
+globs: src/**/*.{jsx,tsx}
+---
+# Next.js のルール
+
+- Next.js の App Router を使用し、サーバーコンポーネントでのデータ取得を優先して、レンダリング効率と SEO の向上を図る。
+- フレームワーク依存の export default は、Next.js のページコンポーネントなど例外的なケースのみ使用する。
+- 'use client' を最小限にし、サーバーコンポーネントと SSR を優先する。
+- 複数の非同期処理がある場合は、Promise.all を利用して並列処理することで、処理の待ち時間を短縮する。

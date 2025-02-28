@@ -1,0 +1,36 @@
+name: CI
+on: push
+jobs:
+  test:
+    name: CI
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - 15432:5432
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    env:
+      CI: true
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+      - uses: actions/cache@v2
+        id: client-bun-cache
+        with:
+          path: 'node_modules'
+          key: client-bun-${{ hashFiles('bun.lockb') }}
+      - run: bun install
+        if: steps.client-bun-cache.outputs.cache-hit != 'true'
+      - run: cp .env.example .env 
+      - run: bun run db:migrate
+      - run: bun run biome:check
+      - run: bun run typecheck
+      - run: bun run build
+      - run: bun test
+      

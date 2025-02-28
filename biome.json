@@ -1,0 +1,70 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
+  "organizeImports": {
+    "enabled": false,
+    "ignore": [
+      ".next",
+      "node_modules",
+      ".vercel",
+      ".vscode",
+      ".git",
+      ".github",
+      ".husky",
+      "@types",
+      ".expo"
+    ]
+  },
+  "linter": {
+    "ignore": [
+      ".next",
+      "node_modules",
+      ".vercel",
+      ".vscode",
+      ".git",
+      ".github",
+      ".husky",
+      "@types",
+      ".expo"
+    ],
+
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "useButtonType": "off"
+      },
+      "correctness": { "useExhaustiveDependencies": "off" }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "ignore": [
+      ".next",
+      "node_modules",
+      ".vercel",
+      ".vscode",
+      ".git",
+      ".github",
+      ".husky",
+      "@types",
+      ".expo"
+    ],
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "arrowParentheses": "always",
+      "jsxQuoteStyle": "double",
+      "semicolons": "asNeeded",
+      "trailingComma": "none",
+      "quoteProperties": "asNeeded",
+      "bracketSpacing": true,
+      "bracketSameLine": false
+    }
+  }
+}
