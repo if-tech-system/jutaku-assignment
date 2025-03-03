@@ -17,7 +17,7 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
       - name: 'node_modulesキャッシュ取得'
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: client-bun-cache
         with:
           path: 'node_modules'
