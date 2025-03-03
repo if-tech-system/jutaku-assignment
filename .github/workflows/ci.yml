@@ -9,7 +9,7 @@ jobs:
       postgres:
         image: postgres
         ports:
-          - 15432:5432
+          - 25432:5432
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
