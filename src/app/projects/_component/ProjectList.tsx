@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Box, Button, Text, Title, Table } from '@mantine/core'
+import { Box, Button, Title, Table } from '@mantine/core'
 
 export const ProjectList = () => {
   return (
