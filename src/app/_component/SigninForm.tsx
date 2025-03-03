@@ -75,12 +75,6 @@ export function SigninForm() {
           </Button>
         </Stack>
       </form>
-
-      <Text mt="md">
-        <Anchor href="/reset-password" size="sm">
-          パスワードを忘れた方はこちら
-        </Anchor>
-      </Text>
     </Card>
   )
 }
